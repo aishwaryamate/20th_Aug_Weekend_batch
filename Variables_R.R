@@ -76,30 +76,41 @@ info
 info[c(1,4)] <- c('Tarun', "FALSE")
 
 #List Creation
-
-
-
-
+lst = list('Sakshi',20,165.52,T)
+lst
 
 #Accessing and replacing elements from list
 
-
-
+lst[2:4]
+lst[c(1,4)]
+lst[3] <- 'Pune'
+lst
 
 
 #Data Frame Creation
 
+ID <- c(100,101,102,103,104)
+Name <- c('A','B','C','D','E')
+Age <- c(20,23,25,30,35)
+Dept <- c('HR','Accounts','DA','DS','Marketing')
+City <- c('Pune','Mumbai','HYD','Delhi','Chennai')
 
-
-
+df <- data.frame(ID,Name,Age,Dept,City)
+View(df)
 
 
 #Accessing elements from a data frame
 
+df[1,5]
+df[3,4]
+df[1:2,4:5]
+df[4:5,2:3]
+df[1,c(1,5)]
+df[c(2,5),c(1,5)]
 
 #Replacing values from a data frame.
+df[3,4] <- 'Data Analyst'
+df[4,4] <- 'Data Scientist'
 
 
-
-
-
+df[c(2),c(1,5)] <- c(201,'Bengaluru')
